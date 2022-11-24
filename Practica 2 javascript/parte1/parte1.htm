@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cat=0
+        function Colortex() {
+            var color=prompt("dame un color")
+            document.getElementById("caja").style.backgroundColor = color;
+        }
+        function Colortex2() {
+            var tex=prompt("introduce lo que desias poner en el contenedor")
+            document.getElementById("caja").innerHTML = tex;
+        }
+        function Typeletter() {
+            font= String;
+            if(cat==3){
+            var font= 'Arial Narrow Bold'
+            cat==0;};
+            if(cat==2){
+            var font= 'Segoe UI'
+            cat==3};           
+            if(cat==1){
+            var font= 'Franklin Gothic Medium'
+            cat==2;};
+            if(cat==0){
+            var font= 'Courier New';
+            cat==1}; 
+
+
+            
+
+            document.getElementById("contenido").style.fontFamily = font;
+
+        }
+    </script>
+
+    <div id="caja"><span id="contenido">Este es el contenido del div 1</span></div> <br>
+    <button id="text" onclick="Colortex2()">Cambiar texto</button><br>
+    <button id="fond" onclick="Colortex()">Cambiar color fondo</button><br>
+    <button id="type" onclick="Colortex(),Typeletter()">Cambiar texto y color de letra</button>
+
+
+</body>
+</html>

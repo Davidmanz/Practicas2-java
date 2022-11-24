@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ function campos() {
+    const nombrei = document.getElementById("nombrei").value;
+    const papellidoi = document.getElementById("papellidoi").value;
+    const sapellidoi = document.getElementById("sapellidoi").value;
+    const correoi = document.getElementById("correoi").value;
+    const  nai = document.getElementById("nai").value;
+    const ss = document.getElementById("ss").value;
+    const s = document.getElementById("s").value;
+ if (nombrei == "" || papellidoi == "" ||sapellidoi == "" ||
+ correoi == "" ||nai == "" ||ss == "" || s == "" ) {
+    alert("todos los campos tienen que estar llenos")
+ }
+
+    cont=0;
+	for (var i = 0, j = correoi.length; i < j; i++) {
+ 
+	 if(correoi[i] == "@"){
+	 cont++;
+	   }
+	}
+    if(cont == 0){
+	alert('Ingrese un email valido.');
+
+	}
+    if (ss.length < 7){ 
+        alert('El primer ss tiene que ser mayor que 7 dijitos');
+    }
+    if (s.length < 1 || s.length >2){ 
+        alert('El segundo ss tiene que ser entre 1 y 2 dijitos');
+    }
+    
+ }
+ 
+ 
+</script>
+    <h1>Solicitud del informe de Vida Laboral</h1>
+    <div id="caja1">
+        <div id="cajai">
+            <span id="nombre">Nombre:</span><br> 
+            <span id="papellido">Primer Apellido:</span> <br>
+            <span id="sapellido">Segundo Apellido:</span> <br>
+            <span id="correo">Correo Electronico:</span> <br>
+            <span id="na">Numero de afiliado a la S.S.:</span> <br>
+        </div>
+            <div id="cajad">
+                <input type="text" name="" id="nombrei"> <br>
+                <input type="text" name="" id="papellidoi"> <br>
+                <input type="text" name="" id="sapellidoi"> <br>
+                <input type="text" name="" id="correoi"> <br>
+                <select name="afiliado" id="nai"> 
+                    <option value="barcelona">Barcelona</option>
+                    <option value="Valladolid">Valladolid</option>
+                    <option value="Madrid">Madrid</option>
+                </select>/ <input type="text" id="ss">/<input type="text" id="s">
+        </div>
+    </div>
+        <a href="./ejer4.html" onclick="campos()">Enviar</a>  <a href="./ejer4.html">borrar</a>
+</body>
+</html>

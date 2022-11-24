@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function Siguiente() {
+        
+    
+        const not = 10/3
+        var nota=0
+        const uno = document.getElementById("uno.c").checked
+        const dos = document.getElementById("dos.d").checked
+        const tres = document.getElementById("tres.c").checked
+        if (uno){
+            nota = nota + not;
+        }
+        if (dos){
+            nota = nota  + not;
+        }
+        if (tres){
+            nota =  nota + not;
+        }
+        alert(nota);
+    }
+        </script>
+
+
+
+
+
+<div id="caja1"><p>¿Cual de los siguientes elementos no se considera que sea un marcador semantico?</p>
+    <p>Seleccione una</p>
+    <input type="radio" name="uno" id="uno.a">a.atticle <br>
+    <input type="radio" name="uno" id="uno.b">b.section <br>
+    <input type="radio" name="uno" id="uno.c">c.div <br>
+    <input type="radio" name="uno" id="uno.d">d.aside <br>
+</div>
+<div id="caja1"><p>Esta creando una caracteristica de busqueda que usa un maracado de formulario web para su sitio web. Cuando un usuario abre por primera vez, desea que el cursor del usuario aparezca en el campo Buscar de manera automatica. ¿Que atributo de entrada debe usar?</p>
+    <p>Seleccione una</p>
+    <input type="radio" name="dos" id="dos.a">a.formmethod <br>
+    <input type="radio" name="dos" id="dos.b">b.placeholder <br>
+    <input type="radio" name="dos" id="dos.c">c.form <br>
+    <input type="radio" name="dos" id="dos.d">d.autofocus <br>
+</div>
+<div id="caja1"><p>Desea agregar un titulo antes de una tabla de html que aparecera solo una vez ¿Que etiqueta usa?</p>
+    <p>Seleccione una</p>
+    <input type="radio" name="tres" id="tres.a">a.< captation > <br>
+    <input type="radio" name="tres" id="tres.b">b.< colgroup > <br>
+    <input type="radio" name="tres" id="tres.c">c.< title > <br>
+    <input type="radio" name="tres" id="tres.d">d.< thead > <br>
+</div>
+<input type="submit" value="Siguiente" id="buton" onclick="Siguiente()">
+    
+</body>
+</html>
+

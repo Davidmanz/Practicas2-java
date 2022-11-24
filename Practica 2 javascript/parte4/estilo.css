@@ -1,0 +1,54 @@
+#cajai {
+    float: left;
+    height: 120px;
+    width: 250px;
+    
+}
+#nombre {
+    margin-left:90px;
+    
+    font-size: larger;
+}
+#papellido {
+    margin-left:60px;
+    padding-top:5px;
+    font-size: larger;
+}
+#sapellido{
+    margin-left:52px;
+    padding-top:5px;
+    font-size: larger;
+}
+#correo{
+    margin-left:47px;
+    padding-top:5px;
+    font-size: larger;
+}
+#na{
+    margin-left:10px;
+    padding-top:5px;
+    font-size: larger;
+}
+#ss {
+width: 60px;
+}
+
+
+#s {
+    width: 30px;
+}
+
+#cajad {
+    float: right;
+    height: 120px;
+    width: 280px;
+
+
+}
+#caja1 {
+    height: 120px;
+    width: 530px;
+    border: solid 4px black ;
+    background-color: yellow;
+    font-size: medium;
+}

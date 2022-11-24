@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let x=true;
+        
+        function calcular(){
+            const gas = document.getElementById("gas").checked;
+            const dies = document.getElementById("dies").checked;
+            const hibr = document.getElementById("hibr").checked;
+            const metalizada = document.getElementById("metalizada").checked;
+            const  tresp = document.getElementById("tresp").checked;
+            const cincop = document.getElementById("cincop").checked;
+            const familiar = document.getElementById("familiar").checked;
+            const rojo = document.getElementById("rojo").checked;
+            const verde = document.getElementById("verde").checked;
+            const naranja = document.getElementById("naranja").checked;
+            const blanco = document.getElementById("blanco").checked;
+            const negro = document.getElementById("negro").checked;
+            const llanta = document.getElementById("llanta").checked;
+            const climatizador = document.getElementById("climatizador").checked;
+            const gps = document.getElementById("gps").checked;
+            const dvd = document.getElementById("dvd").checked;
+
+            let valor=12000;
+
+            if ( !(gas) && !(dies) && !(hibr)){
+                document.getElementById("tipo_motor").innerHTML=
+                "<p>Seleccione el tipo de motor </p>";
+            }
+            if(dies){
+                valor += 1500;
+            }
+            if(hibr){
+                valor += 3000;
+            }
+            if (blanco) {
+                valor -= 500;
+            }
+            if (negro) {
+                valor -= 600;
+            }
+            if (llanta) {
+                valor  += 200;
+            }
+            if (climatizador) {
+                valor += 800;
+            }
+            if (gps) {
+                valor += 350;
+            }
+            if (dvd && familiar) {
+                valor += 800;
+            }
+            if (rojo || verde || naranja && metalizada) {
+                valor += 750;
+            }
+            if (dvd && !(familiar)) {
+                document.getElementById("mtal").innerHTML=
+                "<p>Solo se puede el dvd si es un coche tipo familiar </p>";
+                x=false
+            }
+            if (!(rojo) && !(verde) && !(naranja) && metalizada){
+                document.getElementById("mtal2").innerHTML=
+                "<p>Solo se puede con pintura metalizada verde, rojo y naranja </p>";
+                x=false
+            }
+            if (!(gas) && tresp){
+                document.getElementById("ppptresp").innerHTML=
+                "<p>Solo se puede con motor de gasolina</p>"
+                x=false
+            }
+            if (x){
+                alert(valor)
+            }
+            
+        }
+        
+        </script>
+<div id="caja2">
+
+<div id="caja1">Configuracion del coche</div>
+<div id="caja1">Tipo de Motor <br>
+    <input type="radio" name="motor" id="gas" >gasolina 
+    <input type="radio" name="motor" value="diesel" id="dies" >Diesel (+1500E) 
+    <input type="radio" name="motor" value="hibrido" id="hibr">Hibrido (+3000E) 
+        <p id="tipo_motor"  color="red"></p> </div>
+<div id="caja1">Tipo de Puertas <br>
+    <input type="radio" name="Puertas" id="tresp">3 Puertas (+2000 E)(Solo con Gasolina)
+    <input type="radio" name="Puertas" id="cincop">5 Puertas
+    <input type="radio" name="Puertas"  id="familiar">Familiar (+1500E)
+        <p id="ppptresp"></p>
+    </div>
+    <div id="caja1">Color de Pintura <br>
+        <input type="radio" name="cPintura"  id="rojo">Rojo
+        <input type="radio" name="cPintura" id="verde" >Verde
+        <input type="radio" name="cPintura" id="naranja">Naranja
+        <input type="radio" name="cPintura" id="blanco">Blanco (-500 E)
+        <input type="radio" name="cPintura" id="negro">Negro (-600 E)
+    </div>
+    <div id="caja1">Tipo de Pintura <br>
+        <input type="checkbox" name="Pintura" id="metalizada">Metalizada (+750 E)(Solo Rojo, Verde o Naranja) <br>
+        <input type="checkbox" name="Pintura"  id="llanta">Llanta (+200 E) <br>
+        <input type="checkbox" name="Pintura" id="climatizador">Climatizador (+ 800 E) <br>
+        <input type="checkbox" name="Pintura" id="gps">GPS (+340 E) <br>
+        <input type="checkbox" name="Pintura" id="dvd">DVD (+800 E)(Solo modelo Familiar) <br>
+        <p id="mtal"></p><p id="mtal2"></p>
+    </div>
+    <div id="caja1">Total a Cobrar <br> <input type="submit" onclick="calcular()"></div>
+ </div>
+</body>
+</html>
